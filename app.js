@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 
+
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 /*
 
@@ -44,7 +45,7 @@ client.connect(function (err) {
 MongoClient.connect("mongodb+srv://miprimercluster-zfvgq.mongodb.net/productos",
 { auth:{
     user:'DanielRojas',
-    password:'soyelpassword'
+    password:'soylacontraseñadedaniel.'
 }},
 
 function(err,client){
@@ -54,9 +55,9 @@ db = client.db('productos');
 
 //Iniciar el servidor
 
-app.listen(process.env.PORT || 1234);
+app.listen(process.env.PORT || 5000);
 }
-)
+);
 
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -208,6 +209,7 @@ app.get('/obtenerObjectID', (req, res)=> {
 //
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 
 app.listen(1234, () => {
     console.log("Escuchando en el puerto 1234")
