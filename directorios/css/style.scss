@@ -1,0 +1,464 @@
+$Beige: #F8F5F2;
+$Beige2: #BFA676;
+$Font: 'Nunito',
+sans-serif;
+;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $Font;
+    color: $Beige2;
+}
+
+section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.shoppingCart {
+    background-color: $Beige;
+    height: 100px;
+}
+
+
+
+.shoppingCart article.logo {
+    height: 100%;
+    width: 20%;
+}
+
+.shoppingCart article.logo img {
+    margin-left: 20vh;
+    margin-top: 20px;
+    height: 60%;
+
+}
+
+
+.shoppingCart article.cart img {
+    margin-top: 40px;
+    height: 30%;
+    padding-left: 60px;
+}
+
+.shoppingCart article.nothing {
+    height: 100%;
+    width: 60%;
+}
+
+.shoppingCart article.cart {
+    height: 100%;
+    width: 20%;
+
+    input {
+        color: inherit;
+        background: url("/static/files/wp4-2.png");
+        background-size: 100px;
+        margin-top: 10px;
+        height: 80%;
+        width: 100px;
+
+        img {
+            height: 20px;
+        }
+    }
+}
+
+
+.photo {
+    background-image: url("static/files/wp1.jpg");
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}
+
+.variables {
+    background-color: $Beige;
+    margin: auto;
+    height: 100px;
+}
+
+
+
+.variables article {
+    justify-content: center;
+    margin: auto;
+    height: 2vh;
+}
+
+article.tags {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    p{
+        margin-left: 20px;
+    }
+}
+
+select#limits {
+    appearance: button;
+    border: none;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+    height: 20px;
+    font-size: 5pt;
+}
+
+.products {
+    background-color: $Beige;
+    height: 300px;
+    justify-content: center;
+
+}
+
+.products article {
+    width: 15%;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.products article img {
+    height: 200px;
+
+}
+
+.products article img:hover {
+    height: 250px;
+    background-blend-mode: hard-light;
+}
+
+
+.register {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+
+}
+
+.register article {
+    margin: 0 20px;
+    height: 2vh;
+    height: 2vh;
+
+
+    button {
+        width: 200px;
+        height: 30px;
+        background-color: black;
+        border: none;
+        font-size: 8pt;
+        letter-spacing: 2px;
+        color: white;
+
+    }
+
+
+
+    button:hover {
+        background-color: $Beige;
+        color: black;
+        color: green;
+    }
+
+}
+
+.register article input {
+    width: 200px;
+    height: 25px;
+    font-size: 8pt;
+    padding-left: 10px;
+}
+
+.check {
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    background-color: white;
+    color: black;
+    font-size: 5pt;
+}
+
+.interest {
+    background-color: black;
+    color: white;
+    height: 400px;
+    font-size: 8pt;
+    justify-content: center;
+
+}
+
+.interest article {
+
+    margin: 60px 30px 10px 30px;
+    padding: 0px 30px;
+}
+
+.interest article p {
+    padding-top: 20px;
+}
+
+//la magia negra
+main {
+    #items {
+        margin: 0 0 0 9%;
+        display: grid;
+        align-content: center;
+        align-self: center;
+        align-items: center;
+
+
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        text-align: center;
+        padding: 8px;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        div {
+            position: relative;
+
+            p {
+                margin-bottom: 0px;
+                margin-top: 2px;
+                font-size: 9pt;
+                width: 60%;
+            }
+
+            img {
+                z-index: -0px;
+                width: 100%;
+            }
+
+            div {
+                width: 60%;
+                position: relative;
+                button {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    #Productos {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        color: black;
+        font-family: $Font;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        text-align: center;
+        padding: 8px;
+        justify-content: center;
+
+        .recomendaciones {
+            display: flex;
+            flex-direction: column;
+            justify-items: end;
+            justify-self: end;
+
+            img {
+                margin: 0px 0px 20px 0px;
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+
+        .productoPrincipal {
+            height: 560px;
+            img {
+                height: 560px;
+            }
+        }
+
+        .datosproductoPrincipal {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: flex-start;
+            align-items: flex-start;
+
+            p.Norm {
+                text-align: left;
+                padding-right: 200px;
+
+            }
+
+            div.row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            
+p.Cantidad{margin: 0px;
+margin-right: 20px;}
+input{margin: 0px;}
+
+            }
+
+            button.compra {
+                width: 200px;
+                height: 30px;
+                background-color: $Beige2;
+                border: none;
+                font-size: 8pt;
+                letter-spacing: 2px;
+                color: white;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+
+            button.compra:hover {
+                background-color: $Beige;
+                color: black;
+                color: green;
+            }
+
+
+            p.Tit {
+                margin-top: 0px;
+                font-size: 30px;
+            }
+        }
+
+
+    }
+}
+
+
+div.soloBorde {
+    border: $Beige2;
+    border-style: solid;
+    border-width: thin;
+}
+
+main {
+    #CarritoDeCompra {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        .space1 {
+            width: 10%;
+            height: 400px;
+        }
+
+        .bolsaDeCompra {
+            margin: 5px;
+            width: 50%;
+            height: 400px;
+
+            div.imagen--soloBorder {
+                width: 50%;
+            }
+
+            div.Info-Button--soloBorder {
+                width: 20%;
+            }
+
+
+
+            div.soloBorder {
+                height: 100px;
+                border: $Beige2;
+                border-style: solid;
+                border-width: thin;
+                display: flex;
+                flex-direction: row;
+
+            }
+
+            img {
+                margin-left: 20px;
+                margin-top: 20px;
+                height: 70%;
+            }
+        }
+
+        .resumen {
+            margin: 5px;
+            width: 30%;
+            height: 400px;
+
+
+
+            p {
+                margin: 0px;
+                border: $Beige2;
+                border-style: solid;
+                border-width: thin;
+            }
+
+
+            div.online {
+                display: flex;
+                flex-direction: row;
+                border: $Beige2;
+                border-style: solid;
+                border-width: thin;
+
+                p.s {
+                    padding-left: 14px;
+                    justify-content: flex-start;
+                    width: 50%;
+                    border: none;
+                }
+
+                p.e {
+                    padding-left: 140px;
+                    width: 50%;
+                    border: none;
+                }
+            }
+
+
+
+        }
+
+        .space2 {
+            width: 10%;
+            height: 400px;
+        }
+    }
+}
+
+.input-group-field {
+    width: 50px;
+    margin-top: 20px;
+}
