@@ -1,7 +1,10 @@
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 const express = require('express');
 const consolidate = require('consolidate');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
+
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 const app = express();
 const url = 'mongodb://localhost:27017';
@@ -22,11 +25,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 
+const client = new MongoClient(url);
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-/*
 
-const client = new MongoClient(url);
 var db = null;
 
 client.connect(function (err) {
@@ -37,31 +39,26 @@ client.connect(function (err) {
     db = client.db(dbName);
 });
 
-*/
-
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 //CONECTAR A BASE DE DATOS ATLASDB
-
 MongoClient.connect("mongodb+srv://miprimercluster-zfvgq.mongodb.net/productos",
-{ auth:{
-    user:'DanielRojas',
-    password:'soylacontraseñadedaniel.'
-}},
+{
+    auth: { user: "DanielRojas",
+            password: "contraseñabasica"
 
+}},
 function(err,client){
 if(err)throw err;
 
-db = client.db('productos');
-
+db = client.db("productos");
+  
 //Iniciar el servidor
+app.listen(process.env.PORT || 1234);
 
-app.listen(process.env.PORT || 5000);
 }
 );
 
-
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 
 app.get('/', (req, res) => {
     const collection = db.collection('productos').find({});
@@ -91,7 +88,6 @@ app.get('/', (req, res) => {
     });
 })
 
-
 //Productos
 app.get('/productos/:id/', (req, res)=> {
 
@@ -107,7 +103,6 @@ app.get('/productos/:id/', (req, res)=> {
     });
 }
 );
-
 
 //Carrito De Compra
 
@@ -144,7 +139,6 @@ app.get('/agregarCarro', (req,res)=>{
     });
 })
 
-
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 /*
@@ -169,7 +163,6 @@ app.get('/carroCompra', (req, res) => {
 */
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-
 app.get('/agregarDocumento', function (request, response) {
     const collection = db.collection('productos');
     collection.insert({
@@ -187,7 +180,6 @@ app.get('/agregarDocumento', function (request, response) {
 });
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 
 app.get('/obtenerObjectID', (req, res)=> {
     var arreglo = req.query.ids.split(',');
@@ -207,17 +199,14 @@ app.get('/obtenerObjectID', (req, res)=> {
 })
 
 //
-
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
+/*
 app.listen(1234, () => {
     console.log("Escuchando en el puerto 1234")
 })
-
+*/
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 var misDatos = [{
     id: 1,
     data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
