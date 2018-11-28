@@ -22,11 +22,11 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+/*
+
 const client = new MongoClient(url);
 var db = null;
-
-//<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 
 client.connect(function (err) {
     if (err) {
@@ -35,6 +35,28 @@ client.connect(function (err) {
     }
     db = client.db(dbName);
 });
+
+*/
+
+//<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+//CONECTAR A BASE DE DATOS ATLASDB
+
+MongoClient.connect("mongodb+srv://miprimercluster-zfvgq.mongodb.net/productos",
+{ auth:{
+    user:'DanielRojas',
+    password:'soyelpassword'
+}},
+
+function(err,client){
+if(err)throw err;
+
+db = client.db('productos');
+
+//Iniciar el servidor
+
+app.listen(process.env.PORT || 1234);
+}
+)
 
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
