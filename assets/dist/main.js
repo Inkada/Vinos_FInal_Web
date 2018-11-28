@@ -7,7 +7,7 @@ document.querySelectorAll('.wineContainer').forEach((e) => {
         <div class="productContainer">
 
         <div class="imageContainer">
-            <div class="wineImage" style="background-image:url('./assets/imgs/wines/wine.png')">
+            <div class="wineImage" style="background-image:url('/imgs/wines/wine.png')">
 
             </div>
         </div>
@@ -29,7 +29,7 @@ document.querySelectorAll('.wineContainer').forEach((e) => {
 
             <div class="buttonAddBag">
                 <div class="icon">
-                    <img src="./assets/imgs/icos/bag.png" alt="">
+                    <img src="/imgs/icos/bag.png" alt="">
                 </div>
                 <p>Agregar a la bolsa</p>
             </div>
