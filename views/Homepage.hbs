@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda | Sanchez Carrillo Wines</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <script type="text/javascript" src="js/paper.js"></script>
+    <script type="text/paperscript" src="js/myScript.js" canvas="myCanvas">
+</script>
+</head>
+
+<body>
+    <!--
+
+        Here is the sidebar
+    -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="./assets/imgs/logo.png" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Tienda</a></li>
+                <li><a href="">Pago de factura</a></li>
+                <li><a href="">Trabaja con nosotros</a></li>
+                <li><a href="">Ventas corporativas</a></li>
+                <li><a href="">Nuestras tiendas</a></li>
+                <li><a href="">¿Quiénes somos?</a></li>
+
+            </ul>
+        </div>
+        <div class="registerForm">
+            <form action="submit">
+                <input type="text" class="inputText" placeholder="Nombre" name="name" id="">
+                <input type="text" class="inputText" placeholder="Email" name="password" id="">
+                <div class="checkCont">
+                    <input type="checkbox" id="accept-terms" value="">
+
+                    <label>
+                        Aceptar términos y condiciones
+                    </label>
+
+                </div>
+                <button>Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <!--
+
+        Here is the content container
+    -->
+    <div class="app">
+
+        <div class="forPopUp">
+        </div>
+        <!--
+
+            There are the bars, they are fixed in their position
+        -->
+        <div class="upperBar">
+            <div class="searchingBar">
+                <div class="icon">
+                    <img src="./assets/imgs/icos/search.png" alt="">
+                </div>
+                <input type="text" placeholder="Buscar un vino" name="" id="">
+            </div>
+            <div class="icon bag">
+                <img src="./assets/imgs/icos/bag.png" alt="">
+            </div>
+        </div>
+
+        <div class="filterBar">
+            <form action="">
+                <label>Marca</label>
+                <select name="" id="">
+                    <option value="">Marca</option>
+                </select>
+                <label>Ordenar por:</label>
+                <select name="" id="">
+                    <option value="">Ordenar por</option>
+                </select>
+                <label>Rango de precios</label>
+                <input name="" type="range" min="200" max="900" step="100" />
+            </form>
+        </div>
+
+        <!--
+
+            Here start the content of the products
+        -->
+
+        <div class="wineContainer">
+            <div class="wineImage" style="background-image:url('./assets/imgs/wines/wine.png')">
+
+            </div>
+            <div class="wineDescription">
+                <div class="name">
+                    <p>Vino Blanco</p>
+                </div>
+                <div class="character">
+                    <p>Amargo</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./assets/dist/main.js"></script>
+</body>

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Kadwa:400,700");
+@import url("https://fonts.googleapis.com/css?family=Holtwood+One+SC");
+.upperBar {
+  width: auto;
+}
+
+.app {
+  padding-top: 0;
+  overflow-y: hidden;
+}
+
+.app .productContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+
+.app .productContainer .imageContainer {
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 50%;
+  background: url(./../imgs/backWine.png);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .productContainer .imageContainer .wineImage {
+  width: 130px;
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+}
+
+.app .productContainer .detailsContainer {
+  border-radius: 0 20px 20px 0;
+  padding: 20px;
+  padding-left: 40px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  color: #262d2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.app .productContainer .detailsContainer h6 {
+  font-weight: bold;
+  font-size: 19;
+}
+
+.app .productContainer .detailsContainer .title h3 {
+  font-family: 'Holtwood One SC', serif;
+  font-size: 21;
+  letter-spacing: 3px;
+}
+
+.app .productContainer .detailsContainer .price h3 {
+  font-weight: bold;
+  font-size: 60px;
+  padding: 0px;
+  line-height: 60px;
+}
+
+.app .productContainer .detailsContainer .quantity input {
+  color: #262d2f;
+  font-size: 26px;
+  border: 4px #262d2f solid;
+  padding: 5px 20px;
+  width: 120px;
+  background: white;
+}
+
+.app .productContainer .detailsContainer .quantity input:focus {
+  outline: none;
+}
+
+.app .productContainer .buttonAddBag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #262d2f;
+  padding: 5px 20px;
+  margin: 0 7px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .productContainer .buttonAddBag:hover {
+  -webkit-box-shadow: #262d2f 2px 2px 5px;
+          box-shadow: #262d2f 2px 2px 5px;
+}
+
+.app .productContainer .buttonAddBag .icon {
+  margin-right: 20px;
+}
+
+.app .productContainer .buttonAddBag p {
+  color: white;
+  font-family: 'Holtwood One SC', serif;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+/*# sourceMappingURL=product.css.map */

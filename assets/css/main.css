@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Kadwa:400,700");
+@import url("https://fonts.googleapis.com/css?family=Holtwood+One+SC");
+* {
+  font-family: 'Kadwa', serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font-family: 'Holtwood One SC', serif;
+  background: #262d2f;
+  color: white;
+  padding: 5px 20px;
+  margin: 0 7px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+button:hover {
+  -webkit-box-shadow: #262d2f 2px 2px 5px;
+          box-shadow: #262d2f 2px 2px 5px;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 290px;
+  height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .logo img {
+  width: 135;
+  height: 95px;
+}
+
+.sidebar .menu {
+  margin-top: -40px;
+}
+
+.sidebar .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sidebar .menu ul li {
+  text-align: center;
+  list-style-type: none;
+}
+
+.sidebar .menu ul li a {
+  text-decoration: none;
+  color: #262d2f;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sidebar .registerForm {
+  padding: 5px;
+  width: 220px;
+  border: 5px #262d2f solid;
+  border-top: none;
+  position: relative;
+}
+
+.sidebar .registerForm form {
+  padding: 15px;
+  margin-bottom: 0;
+  border: 1px #262d2f solid;
+  border-top: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sidebar .registerForm form .inputText {
+  color: #262d2f;
+  font-size: 12px;
+  border: 2px solid #262d2f;
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.sidebar .registerForm form .inputText::-webkit-input-placeholder {
+  color: #afafaf;
+}
+
+.sidebar .registerForm form .inputText:-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.sidebar .registerForm form .inputText::-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.sidebar .registerForm form .inputText::placeholder {
+  color: #afafaf;
+}
+
+.sidebar .registerForm form .checkCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+}
+
+.sidebar .registerForm form .checkCont label {
+  color: #afafaf;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.sidebar .registerForm form:after {
+  content: '';
+  width: 100%;
+  margin-left: -21px;
+  margin-top: -50px;
+  height: 65px;
+  top: 0;
+  position: absolute;
+  background: url(../imgs/arabesc.png);
+  background-size: cover;
+}
+
+.upperBar {
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 360px;
+  position: fixed;
+  right: 40px;
+  top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.upperBar .searchingBar {
+  margin: 5px 0;
+  border: 2px solid #262d2f;
+  padding: 5px 10px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 50px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.upperBar .searchingBar .icon {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  padding-right: 10px;
+}
+
+.upperBar .searchingBar input {
+  color: #262d2f;
+  font-size: 12px;
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+
+.upperBar .searchingBar input::-webkit-input-placeholder {
+  color: #afafaf;
+}
+
+.upperBar .searchingBar input:-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.upperBar .searchingBar input::-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.upperBar .searchingBar input::placeholder {
+  color: #afafaf;
+}
+
+.upperBar .searchingBar input:focus {
+  outline: none;
+}
+
+.upperBar .bag {
+  width: 30px;
+  height: 30px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.upperBar .bag:after {
+  content: '0';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #9f2010;
+  border-radius: 10px;
+  right: 20px;
+  margin-top: -10px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+
+.app {
+  background: #eee8dd;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: scroll;
+}
+
+/*code generated by http://danielstern.ca/range.css/#/*/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 3.05px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(154, 135, 91, 0.78);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(0, 0, 0, 0);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
+          box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
+  border: 3px solid #9a875b;
+  height: 10px;
+  width: 10px;
+  border-radius: 15px;
+  background: #9a875b;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.25px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(223, 216, 201, 0.78);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(154, 135, 91, 0.78);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(0, 0, 0, 0);
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
+  border: 3px solid #9a875b;
+  height: 10px;
+  width: 10px;
+  border-radius: 15px;
+  background: #9a875b;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3.9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: rgba(42, 37, 25, 0.78);
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+
+input[type=range]::-ms-fill-upper {
+  background: rgba(154, 135, 91, 0.78);
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
+  border: 3px solid #9a875b;
+  height: 10px;
+  width: 10px;
+  border-radius: 15px;
+  background: #9a875b;
+  cursor: pointer;
+  height: 3.9px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(154, 135, 91, 0.78);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(223, 216, 201, 0.78);
+}
+/*# sourceMappingURL=main.css.map */

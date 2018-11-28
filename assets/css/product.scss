@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC');
+.upperBar {
+    width: auto;
+}
+
+.app {
+    padding-top: 0;
+    overflow-y: hidden;
+    .productContainer {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 80px;
+        //Quit this if necessary
+        padding-right: 100px;
+        padding-bottom: 100px;
+
+        .imageContainer {
+            border-radius: 20px 0 0 20px;
+
+            height: 100%;
+            width: 50%;
+            background:  url(./../imgs/backWine.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            .wineImage {
+                width: 130px;
+                height: 550px;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    
+        .detailsContainer {
+            border-radius: 0 20px 20px 0; 
+
+            padding: 20px;
+            padding-left: 40px;
+            background:  white;
+            box-sizing: border-box;
+            width: 50%;
+            height: 100%;
+            color: #262d2f;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            h6 {
+                font-weight: bold;
+                font-size: 19;
+            }
+            .title {
+                h3 {
+                    font-family: 'Holtwood One SC', serif;
+                    font-size: 21;
+                    letter-spacing: 3px;
+                }
+    
+            }
+            .price {
+                h3 {
+                    font-weight: bold;
+                    font-size: 60px;
+                    padding: 0px;
+                    line-height: 60px;
+                }
+            }
+            .quantity {
+                input {
+                    color: #262d2f;
+                    font-size: 26px;
+                    border: 4px #262d2f solid;
+                    padding: 5px 20px;
+                    width: 120px;
+                    background: white;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .buttonAddBag {
+            display: flex;
+            background: #262d2f;
+            padding: 5px 20px;
+            margin: 0 7px;
+            border: none;
+            cursor: pointer;
+            transition: .2s all ease;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                box-shadow: #262d2f 2px 2px 5px;
+            }
+            .icon {
+                margin-right: 20px;
+            }
+            p {
+                color: white;
+                font-family: 'Holtwood One SC', serif;
+                letter-spacing: 3px;
+                font-size: 10px;
+            }
+        }
+    }
+   
+}
