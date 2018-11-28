@@ -9,7 +9,7 @@ var app = express(),
 app.engine('hbs', engines.handlebars);
 app.set('views', './views');
 app.set('view engine', 'hbs');
-app.use(express.static('views'));
+app.use(express.static('assets'));
 
 var PORT = process.env.PORT || 5000;
 
@@ -35,12 +35,13 @@ MongoClient.connect("mongodb+srv://miprimercluster-zfvgq.mongodb.net/productos",
 app.get('/', (req, res) => {
     const collection = db.collection('productos').find({});
 
+    /*
     if (req.query.tipo) {
         collection.filter({
             //tipo: "Blanco"
             tipo: req.query.tipo
         })
-    }
+    }*/
 
     collection.toArray(function (err, documentos) {
 
@@ -55,7 +56,11 @@ app.get('/', (req, res) => {
             productos: documentos,
 
         };
-        res.render("Homepage", contexto);
+        res.render("homepage", contexto);
 
     });
+})
+
+app.listen(1234, () => {
+    console.log("Escuchando en el puerto 1234")
 })
