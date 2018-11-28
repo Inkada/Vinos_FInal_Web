@@ -64,7 +64,7 @@ app.listen(PORT);
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-/*
+
 app.get('/', (req, res) => {
     const collection = db.collection('productos').find({});
 
@@ -93,8 +93,7 @@ app.get('/', (req, res) => {
     });
 })
 
-*/
-/*
+
 //Productos
 app.get('/productos/:id/', (req, res)=> {
 
@@ -171,7 +170,7 @@ app.get('/carroCompra', (req, res) => {
 
 //<------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-/*
+
 
 app.get('/agregarDocumento', function (request, response) {
     const collection = db.collection('productos');
@@ -297,4 +296,3 @@ var misDatos = [{
     añejado: 19,
     tipo: "Blanco",
 }]
-*/
