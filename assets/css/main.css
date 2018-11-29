@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,6 +48,11 @@ button:hover {
           box-shadow: #262d2f 2px 2px 5px;
 }
 
+div.sidebar {
+  -webkit-transform: translate(0, -1200px);
+          transform: translate(0, -1200px);
+}
+
 .sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,17 +81,42 @@ button:hover {
   margin-top: -40px;
 }
 
-.sidebar .menu ul {
+.sidebar .menu .desple {
   margin: 0px;
   padding: 0px;
 }
 
-.sidebar .menu ul li {
+.sidebar .menu .desple .desplegables0 {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
+}
+
+.sidebar .menu .desple .desplegables1 {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
+}
+
+.sidebar .menu .desple .desplegables2 {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
+}
+
+.sidebar .menu .desple .desplegables3 {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
+}
+
+.sidebar .menu .desple .desplegables4 {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
+}
+
+.sidebar .menu .desple li {
   text-align: center;
   list-style-type: none;
 }
 
-.sidebar .menu ul li a {
+.sidebar .menu .desple li a {
   text-decoration: none;
   color: #262d2f;
   font-weight: bold;
@@ -93,6 +124,8 @@ button:hover {
 }
 
 .sidebar .registerForm {
+  -webkit-transform: translate(-400px, 0);
+          transform: translate(-400px, 0);
   padding: 5px;
   width: 220px;
   border: 5px #262d2f solid;
@@ -375,3 +408,4 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(223, 216, 201, 0.78);
 }
+/*# sourceMappingURL=main.css.map */

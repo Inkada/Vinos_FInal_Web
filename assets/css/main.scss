@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     display: flex;
     flex-direction: row;
@@ -17,6 +18,7 @@ body {
 .icon {
     width: 20px;
     height: 20px;
+
     img {
         width: 100%;
         height: 100%;
@@ -34,9 +36,14 @@ button {
     border: none;
     cursor: pointer;
     transition: .2s all ease;
+
     &:hover {
         box-shadow: #262d2f 2px 2px 5px;
     }
+}
+div.sidebar{
+    transform: translate(0,-1200px);
+
 }
 .sidebar {
     display: flex;
@@ -46,6 +53,8 @@ button {
     height: 100vh;
     align-content: center;
     align-items: center;
+    
+
     .logo {
 
         img {
@@ -53,16 +62,27 @@ button {
             height: 95px;
         }
     }
-    
+
     .menu {
         margin-top: -40px;
-        ul{
-            margin: 0px;
+
+        .desple {
+
+           margin: 0px;
             padding: 0px;
-            li{
+
+            .desplegables0{transform: translate(-400px,0)}
+            .desplegables1{transform: translate(-400px,0)}
+            .desplegables2{transform: translate(-400px,0)}
+            .desplegables3{transform: translate(-400px,0)}
+            .desplegables4{transform: translate(-400px,0)}
+
+            li {
+
                 text-align: center;
                 list-style-type: none;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #262d2f;
                     font-weight: bold;
@@ -71,21 +91,24 @@ button {
             }
         }
     }
-    
+
     .registerForm {
+        transform: translate(-400px,0);
         padding: 5px;
         width: 220px;
         border: 5px #262d2f solid;
         border-top: none;
         position: relative;
+
         form {
             padding: 15px;
             margin-bottom: 0;
             border: 1px #262d2f solid;
             border-top: none;
-    
+
             display: flex;
             flex-direction: column;
+
             .inputText {
                 color: #262d2f;
                 font-size: 12px;
@@ -93,25 +116,27 @@ button {
                 padding: 1px;
                 width: 100%;
                 margin: 4px 0;
+
                 &::placeholder {
                     color: #afafaf;
                 }
             }
+
             .checkCont {
                 display: flex;
                 margin: 5px;
+
                 label {
                     color: #afafaf;
                     font-size: 12px;
                     line-height: 17px;
                 }
-                input{
-        
-                }
-            }
-    
 
-    
+                input {}
+            }
+
+
+
             &:after {
                 content: '';
                 width: 100%;
@@ -150,6 +175,7 @@ button {
         flex-direction: row;
         border-radius: 50px;
         flex-grow: 2;
+
         .icon {
             width: 20px;
             height: 20px;
@@ -157,15 +183,18 @@ button {
             padding-right: 10px;
 
         }
+
         input {
             color: #262d2f;
             font-size: 12px;
             width: 100%;
             background: transparent;
             border: none;
+
             &::placeholder {
                 color: #afafaf;
             }
+
             &:focus {
                 outline: none;
             }
@@ -178,6 +207,7 @@ button {
         height: 30px;
         padding: 0 20px;
         position: relative;
+
         &:after {
             content: '0';
             position: absolute;
@@ -191,7 +221,7 @@ button {
             color: white;
             font-size: 10px;
             text-align: center;
-            
+
         }
     }
 }
@@ -212,11 +242,13 @@ input[type=range] {
     -webkit-appearance: none;
     width: 100%;
     margin: 3.05px 0;
-  }
-  input[type=range]:focus {
+}
+
+input[type=range]:focus {
     outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
+}
+
+input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 3.9px;
     cursor: pointer;
@@ -224,8 +256,9 @@ input[type=range] {
     background: rgba(154, 135, 91, 0.78);
     border-radius: 1.3px;
     border: 0.2px solid rgba(0, 0, 0, 0);
-  }
-  input[type=range]::-webkit-slider-thumb {
+}
+
+input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
     border: 3px solid #9a875b;
     height: 10px;
@@ -235,11 +268,13 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -3.25px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
     background: rgba(223, 216, 201, 0.78);
-  }
-  input[type=range]::-moz-range-track {
+}
+
+input[type=range]::-moz-range-track {
     width: 100%;
     height: 3.9px;
     cursor: pointer;
@@ -247,8 +282,9 @@ input[type=range] {
     background: rgba(154, 135, 91, 0.78);
     border-radius: 1.3px;
     border: 0.2px solid rgba(0, 0, 0, 0);
-  }
-  input[type=range]::-moz-range-thumb {
+}
+
+input[type=range]::-moz-range-thumb {
     box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
     border: 3px solid #9a875b;
     height: 10px;
@@ -256,28 +292,32 @@ input[type=range] {
     border-radius: 15px;
     background: #9a875b;
     cursor: pointer;
-  }
-  input[type=range]::-ms-track {
+}
+
+input[type=range]::-ms-track {
     width: 100%;
     height: 3.9px;
     cursor: pointer;
     background: transparent;
     border-color: transparent;
     color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
+}
+
+input[type=range]::-ms-fill-lower {
     background: rgba(42, 37, 25, 0.78);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 2.6px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-  }
-  input[type=range]::-ms-fill-upper {
+}
+
+input[type=range]::-ms-fill-upper {
     background: rgba(154, 135, 91, 0.78);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 2.6px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-  }
-  input[type=range]::-ms-thumb {
+}
+
+input[type=range]::-ms-thumb {
     box-shadow: 0px 0px 0px #500031, 0px 0px 0px #6a0041;
     border: 3px solid #9a875b;
     height: 10px;
@@ -286,11 +326,12 @@ input[type=range] {
     background: #9a875b;
     cursor: pointer;
     height: 3.9px;
-  }
-  input[type=range]:focus::-ms-fill-lower {
+}
+
+input[type=range]:focus::-ms-fill-lower {
     background: rgba(154, 135, 91, 0.78);
-  }
-  input[type=range]:focus::-ms-fill-upper {
+}
+
+input[type=range]:focus::-ms-fill-upper {
     background: rgba(223, 216, 201, 0.78);
-  }
-  
+}

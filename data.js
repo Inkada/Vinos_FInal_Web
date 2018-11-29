@@ -1,7 +1,7 @@
 [{
     descripcion: 'Es el vino mas famoso de California. Plantado en más del 10 por ciento de todos los viñedos de California, la uva Zinfandel es uno de los participantes mas importante en la industria del vino tinto de California , creando un vino tinto grande y maduro que viene con el mayor contenido de alcohol de cualquier vino tinto en el mercado (entre 14 y el 17 por ciento). Debido al calor del sol de California, los Zinfandels son conocidos por sus características frutales y grumosas.',
     nombre: "Zinfandel",
-    imagen: "Vinotinto.jpg",
+    imagen: "Vinotinto.png",
     fondo : "Fondovinotinto5.png",
     precio: 300.800,
     añejado: 12,
@@ -100,7 +100,7 @@
 }, {
     descripcion: 'Es un vino con niveles significativos de dióxido de carbono , lo que lo hace efervescente. Comúnmente llamado champán , los países de la UE reservan legalmente ese término para productos producidos exclusivamente en la región francesa de Champagne .',
     nombre: "Sparkling wine",
-    imagen: "vino9.png",
+    imagen: "Vinotinto.png",
     fondo : "Fondoespumoso3.png",
     precio: 23.500,
     añejado: 19,

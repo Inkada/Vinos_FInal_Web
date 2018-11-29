@@ -34,7 +34,7 @@ MongoClient.connect("mongodb+srv://miprimercluster-zfvgq.mongodb.net/productos",
 );
 
 app.get('/', (req, res) => {
-    const collection = db.collection('productos').find({});
+    const collection = db.collection('vinos').find({});
 
     /*
     if (req.query.tipo) {
