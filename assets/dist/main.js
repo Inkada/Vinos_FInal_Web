@@ -1,45 +1,168 @@
 
-document.querySelectorAll('.wineContainer').forEach((e) => {
+let view = true;
 
-    e.addEventListener('click', (e) => {
-        document.querySelector('.forPopUp').innerHTML = `
-        <div class="popup">
-        <div class="productContainer">
+function checkViews() {
+    if (view) {
+        document.querySelector('.wineSuperContainerView1').style.display = 'flex';
+        document.querySelector('.wineSuperContainerView2').style.display = 'none';
+    } else {
+        document.querySelector('.wineSuperContainerView1').style.display = 'none';
+        document.querySelector('.wineSuperContainerView2').style.display = 'block';
+    }
+}
 
-        <div class="imageContainer">
-            <div class="wineImage" style="background-image:url('/imgs/wines/wine.png')">
+document.querySelector('.changeView').addEventListener('click', (e) => {
+    checkViews();
+    view = !view;
 
-            </div>
-        </div>
-        <div class="detailsContainer">
-            <div class="title">
-                <h3>Vino Rojo (800ml)</h3>
-                <h6>A00058176</h6>
-            </div>
+});
+checkViews();
+makeArrays();
+let indexMine = 0;
+drawArrays();
 
-            <div class="price">
-                <h6>Precio</h3>
-                    <h3>$25 000</h3>
-            </div>
+function makeArrays() {
 
-            <div class="quantity">
-                <h6>Cantidad</h6>
-                <input type="number" name="" id="" value="1">
-            </div>
+    wineArray = [];
 
-            <div class="buttonAddBag">
-                <div class="icon">
-                    <img src="/imgs/icos/bag.png" alt="">
+    for (let index = 0; index < wines.length; index++) {
+        const element = wines[index];
+        let elementPre;
+        let elementPost;
+        if (index != 0) {
+            elementPre = wines[index - 1];
+        }
+        if (index != wines.length - 1) {
+            elementPost = wines[index + 1];
+
+        }
+
+        let wine = {
+            pre: elementPre,
+            actual: element,
+            post: elementPost
+        }
+
+        wineArray.push(wine);
+    }
+    console.log(wineArray);
+}
+
+function drawArrays() {
+
+    for (let index = 0; index < wineArray.length; index++) {
+        if (typeof wineArray[indexMine].pre == 'undefined') {
+            document.querySelector('.preelement').innerHTML = `
+            <div class="wineContainer">
+                <div class="wineBackground" >
                 </div>
-                <p>Agregar a la bolsa</p>
+                <div class="wineImage" >
+                </div>
             </div>
-        </div>
-    </div>
-    </div>
-        `;
+            `;
+        } else {
+            document.querySelector('.preelement').innerHTML = `
+            <div class="wineContainer">
+                <div class="wineBackground" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].pre.fondo}')">
+                </div>
+                <div class="wineImage" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].pre.imagen}')">
+                </div>
+            </div>
+            `;
+        }
 
-        document.querySelector('.buttonAddBag').addEventListener('click', (e) => {
-            document.querySelector('.forPopUp').innerHTML = '';
-        })
-    })
+        document.querySelector('.element').innerHTML = `
+        <a href="${wineArray[indexMine].actual.nombre}">
+            <div class="wineContainer">
+                <div class="wineBackground" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].actual.fondo}')">
+                </div>
+                <div class="wineImage" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].actual.imagen}')">
+                </div>
+            </div>
+        </a>
+
+        `;
+        document.querySelector('.wineSuperContainerDetails').innerHTML = `
+                    <p class="name">${wineArray[indexMine].actual.nombre}</p>
+            <p class="type">${wineArray[indexMine].actual.tipo}</p>
+            <div class="chart">
+                <canvas id="myChart">
+
+                </canvas>
+        `;
+        generateChart();
+        if (typeof wineArray[indexMine].post == 'undefined') {
+            document.querySelector('.postElement').innerHTML = `
+
+            <div class="wineContainer">
+                <div class="wineBackground" >
+                </div>
+                <div class="wineImage" >
+                </div>
+            </div>
+
+            `;
+        } else {
+            document.querySelector('.postElement').innerHTML = `
+            
+            <div class="wineContainer">
+                <div class="wineBackground" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].post.fondo}')">
+                </div>
+                <div class="wineImage" style="background-image:url('/imgs/Coleccion/${wineArray[indexMine].post.imagen}')">
+                </div>
+            </div>
+            `;
+        }
+
+    }
+}
+
+document.querySelector('.preelement').addEventListener('click', (e) => {
+    if (indexMine != 0) {
+        indexMine--;
+        drawArrays();
+    }
 })
+
+document.querySelector('.postElement').addEventListener('click', (e) => {
+    if (indexMine != wineArray.length - 1) {
+        indexMine++;
+        drawArrays();
+    }
+})
+
+function generateChart() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var obj = wineArray[indexMine].actual.carateristicas;
+    var result = Object.keys(obj).map(function (key) {
+        return obj[key];
+    });
+
+    var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Denso', 'Líquido', 'Aromatico', 'Dulce', 'Alcohol'],
+            datasets: [{
+                lineTension: 0,
+                pointRadius : 0,
+                data: result,
+                backgroundColor: '#262d2faa',
+                borderColor: '#262d2f'
+            }]
+        },
+        options: {
+            title: {
+                display: false,
+            },
+            tooltip: {
+                enabled: false
+            },
+            legend: {
+                display: false,
+            },
+        }
+    });
+
+
+}
+

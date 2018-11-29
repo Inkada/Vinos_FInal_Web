@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tienda | Sanchez Carrillo Wines</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/product.css">
 </head>
-
 
 <body>
     <div class="sidebar">
@@ -58,8 +57,8 @@
         -->
         <div class="upperBar">
             <div class="searchingBar">
-                <div class="icon">
-                    <img src="/imgs/icos/search.png" alt="">
+                <div class="icon searchIcon">
+                    <img src="/imgs/icos/search.png" style="width: 20px" alt="">
                 </div>
                 <input type="text" placeholder="Buscar un vino" name="" id="">
             </div>
@@ -70,16 +69,18 @@
 
         <div class="filterBar">
             <form action="">
-                <label>Marca</label>
-                <select name="" id="">
-                    <option value="">Marca</option>
-                </select>
+
                 <label>Ordenar por:</label>
-                <select name="" id="">
-                    <option value="">Ordenar por</option>
+                <select name="" id="sortFilter">
+                    <option hidden"Ordenar por" value="">Ordenar por tipo</option>
+                    <option value="Vinotintos">Vinotinto</option>
+                    <option value="Espumosos">Espumosos</option>
+                    <option value="Blanco">Vino Blanco</option>
+                    <option value="Dulcesyespeciales">Especiales</option>
+
                 </select>
                 <label>Rango de precios</label>
-                <input name="" type="range" min="200" max="900" step="100" />
+                <input name="" type="range" min="200" max="900" step="100" id="priceFilter" />
             </form>
         </div>
 
@@ -88,23 +89,84 @@
             Here start the content of the products
         -->
 
-        <div class="wineContainer">
-            <div class="wineImage" style="background-image:url('/imgs/wines/wine.png')">
-
+        <div class="changeView">
+            <div class="icon">
+                <img src="/imgs/icos/sort.png" alt="">
             </div>
-            <div class="wineDescription">
-                <div class="name">
-                    <p>Vino Blanco</p>
+        </div>
+
+        <div class="wineSuperContainer wineSuperContainerView2">
+            <div class="wineSuperContainerElements">
+
+                <div class="preelement secondaryelement">
+                    <div class="wineContainer">
+                        <div class="wineBackground" style="background-image:url('/imgs/Coleccion/Fondoespumoso3.png')">
+                        </div>
+                        <div class="wineImage" style="background-image:url('/imgs/Coleccion/Vinotinto.png')">
+                        </div>
+                    </div>
+
                 </div>
-                <div class="character">
-                    <p>Amargo</p>
+                <a href="">
+
+                </a>
+                <div class="element">
+                    <div class="wineContainer">
+                        <div class="wineBackground" style="background-image:url('/imgs/Coleccion/Fondoespumoso3.png')">
+                        </div>
+                        <div class="wineImage" style="background-image:url('/imgs/Coleccion/Vinotinto.png')">
+                        </div>
+                    </div>
+
                 </div>
+
+                <div class="postElement secondaryelement">
+                    <div class="wineContainer">
+                        <div class="wineBackground" style="background-image:url('/imgs/Coleccion/Fondoespumoso3.png')">
+                        </div>
+                        <div class="wineImage" style="background-image:url('/imgs/Coleccion/Vinotinto.png')">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="wineSuperContainerDetails">
+
             </div>
         </div>
 
 
+
+
     </div>
+    <div class="wineSuperContainerView1">
+        {{#each productos}}
+        <a href="{{nombre}}">
+            <div class="wineContainer" style="background-image:url('/imgs/Coleccion/{{fondo}}')">
+                <div class="wineImage" style="background-image:url('/imgs/Coleccion/{{imagen}}')">
+
+                </div>
+                <div class="wineDescription">
+                    <div class="name">
+                        <p>{{nombre}}</p>
+                    </div>
+                    <div class="character">
+                        <p>{{tipo}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        {{/each}}
+
+    </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="/dist/gr.js"></script>
+    <script src="/dist/database.js"></script>
+    <script src="/dist/filter.js"></script>
     <script src="/dist/main.js"></script>
 </body>

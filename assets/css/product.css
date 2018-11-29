@@ -6,7 +6,7 @@
 
 .app {
   padding-top: 0;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 .app .productContainer {
@@ -87,6 +87,10 @@
   font-family: 'Holtwood One SC', serif;
   font-size: 21;
   letter-spacing: 3px;
+}
+
+.app .productContainer .detailsContainer .title .description {
+  font-weight: normal;
 }
 
 .app .productContainer .detailsContainer .price h3 {

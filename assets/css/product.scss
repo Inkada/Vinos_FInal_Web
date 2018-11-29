@@ -6,7 +6,7 @@
 
 .app {
     padding-top: 0;
-    overflow-y: hidden;
+    overflow-y: scroll;
     .productContainer {
         display: flex;
         flex-direction: row;
@@ -61,7 +61,10 @@
                     font-size: 21;
                     letter-spacing: 3px;
                 }
-    
+                .description {
+                    font-weight: normal;
+
+                }
             }
             .price {
                 h3 {

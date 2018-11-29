@@ -48,12 +48,9 @@ button:hover {
           box-shadow: #262d2f 2px 2px 5px;
 }
 
-div.sidebar {
+.sidebar {
   -webkit-transform: translate(0, -1200px);
           transform: translate(0, -1200px);
-}
-
-.sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +60,7 @@ div.sidebar {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  min-width: 290px;
   width: 290px;
   height: 100vh;
   -ms-flex-line-pack: center;
@@ -236,6 +234,10 @@ div.sidebar {
           flex-grow: 2;
 }
 
+.upperBar .searchingBar .searchIcon {
+  width: 20px !important;
+}
+
 .upperBar .searchingBar .icon {
   width: 20px;
   height: 20px;
@@ -306,7 +308,6 @@ div.sidebar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: scroll;
 }
 
 input[type=range] {
